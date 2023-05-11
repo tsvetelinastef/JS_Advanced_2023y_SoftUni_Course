@@ -1,0 +1,6 @@
+function squareOfStars(){
+    
+}
+
+squareOfStars();
+squareOfStars();

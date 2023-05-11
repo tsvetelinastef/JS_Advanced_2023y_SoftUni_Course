@@ -4,4 +4,9 @@ function echoFunction(string){
 }
 
 echoFunction('Hello, JavaScript!');
+// 18
+//  Hello, JavaScript!
+
 echoFunction('strings are easy');
+// 16
+// strings are easy
