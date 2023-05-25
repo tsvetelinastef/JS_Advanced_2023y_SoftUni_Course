@@ -1,4 +1,5 @@
 function sameNumbers(number){
+    return number == 7;
     
 }
 
