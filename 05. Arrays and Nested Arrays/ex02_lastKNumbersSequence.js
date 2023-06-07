@@ -1,0 +1,8 @@
+function lastKNumbersSequence(){
+    
+}
+
+lastKNumbersSequence();
+// 
+lastKNumbersSequence();
+// 
