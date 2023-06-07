@@ -16,5 +16,5 @@ Input                   Output              Input           Output
 function secondSolution(arr) {
     return Number(arr.shift()) + Number(arr.pop());
 }
-
+ 
 secondSolution(["20", "30", "40"]);
