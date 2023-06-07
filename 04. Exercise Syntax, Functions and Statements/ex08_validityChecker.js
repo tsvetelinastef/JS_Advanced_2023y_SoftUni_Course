@@ -26,7 +26,7 @@ Input                                   Output
                             {1, 1} to {0, 0} is invalid
                             {2, 1} to {1, 1} is valid
  */
-
+ 
 
 function validityChecker(x1, y1, x2, y2){
     function distance(x1, y1, x2, y2) {
