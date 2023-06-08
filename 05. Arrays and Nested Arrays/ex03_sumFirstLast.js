@@ -17,4 +17,5 @@ function secondSolution(arr) {
     return Number(arr.shift()) + Number(arr.pop());
 }
  
-secondSolution(["20", "30", "40"]);
+secondSolution(["20", "30", "40"]);  // 60
+secondSolution(['5', '10']);  // 15
