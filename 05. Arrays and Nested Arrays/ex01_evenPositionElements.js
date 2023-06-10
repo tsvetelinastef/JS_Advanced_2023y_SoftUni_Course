@@ -5,6 +5,7 @@ Input                                       Output
 ['20', '30', '40', '50', '60']              20 40 60
 ['5', '10']                                 5
 */
+
 function evenPositionElements(array) {
     let result = '';
 
@@ -18,4 +19,4 @@ function evenPositionElements(array) {
 evenPositionElements(['20', '30', '40', '50', '60']);
 // 20 40 60
 evenPositionElements(['5', '10']);
-// 5
+// 5 
