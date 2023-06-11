@@ -18,4 +18,4 @@ function secondSolution(arr) {
 }
  
 secondSolution(["20", "30", "40"]);  // 60
-secondSolution(['5', '10']);  // 15
+secondSolution(['5', '10']);  // 15 
