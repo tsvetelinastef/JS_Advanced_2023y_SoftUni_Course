@@ -1,9 +1,9 @@
-(function extendString() {
+(function () {
     String.prototype.ensureStart = function (str) {
+        // if (this.slice(0, str.length) === str) {
         if (this.startsWith(str)) {
             return this.toString();
         }
-
         return `${str}${this}`;
     };
 
@@ -11,7 +11,6 @@
         if (this.endsWith(str)) {
             return this.toString();
         }
-
         return `${this}${str}`;
     };
 
@@ -20,39 +19,36 @@
     };
 
     String.prototype.truncate = function (n) {
-        if (n < 4) {
-            return '.'.repeat(n);
-        }
-
-        if (this.toString().length <= n) {
+        if (this.length <= n) {
             return this.toString();
         }
 
-        if (this.toString().length > n) {
-            const space = this.toString()
-                .slice(0, n - 2)
-                .lastIndexOf(' ');
-            if (space === -1) {
-                return this.toString().slice(0, n - 3) + '...';
-            } else {
-                return this.toString().slice(0, space) + '...';
-            }
+        if (this.includes(' ')) {
+            let lastSpaceIndex = this.length;
+            do {
+                lastSpaceIndex = this.lastIndexOf(' ', lastSpaceIndex - 1);
+            } while (lastSpaceIndex !== -1 && lastSpaceIndex + 3 > n)
+            return `${this.slice(0, lastSpaceIndex)}...`;
         }
+
+        if (n > 3) {
+            let string = `${this.slice(0, n - 3)}...`;
+            return string;
+        }
+        return '.'.repeat(n);
     };
 
-    String.format = function (str, ...rest) {
-        rest.forEach((text, i) => (str = str.replace(`{${i}}`, text)));
-        return str;
-    };
-})();
+    String.format = function (string, ...params) {
+        let replaceRegex = /{(\d+)}/g;
+        let replaced = string.replace(replaceRegex, (match, group1) => {
+            let index = Number(group1);
+            if (params[index] !== undefined) {
+                return params[index];
+            }
 
-let str = 'my string';
-str = str.ensureStart('my');
-str = str.ensureStart('hello ');
-str = str.truncate(16);
-str = str.truncate(14);
-str = str.truncate(8);
-str = str.truncate(4);
-str = str.truncate(2);
-str = String.format('The {0} {1} fox', 'quick', 'brown');
-str = String.format('jumps {0} {1}', 'dog');
+            return match;
+        });
+
+        return replaced;
+    };
+}())
