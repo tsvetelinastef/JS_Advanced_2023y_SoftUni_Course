@@ -1,0 +1,24 @@
+{
+  "name": "js_advanced_2023y_softuni_course",
+  "version": "1.0.0",
+  "description": "JavaScript Advanced May 2023 , start date: 10/05/2023  course from Software University (SoftUni)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsvetelinastef/JS_Advanced_2023y_SoftUni_Course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsvetelinastef/JS_Advanced_2023y_SoftUni_Course/issues"
+  },
+  "homepage": "https://github.com/tsvetelinastef/JS_Advanced_2023y_SoftUni_Course#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}

@@ -2,27 +2,49 @@ const chai = require("chai");
 const expect = chai.expect;
 
 function isOddOrEven(string) {
-    if (typeof string !== "string") {
-        return undefined;
-    }
+  if (typeof string !== "string") {
+    return undefined;
+  }
 
-    if (string.length % 2 === 0) {
-        return "even";
-    }
+  if (string.length % 2 === 0) {
+    return "even";
+  }
 
-    return "odd";
+  return "odd";
 }
 
 describe("Test Even or Odd functionality", function () {
-    it("Test for undefined", function () {
-        expect(isOddOrEven(1)).to.equal(undefined);
-    });
+  it("Test for undefined", function () {
+    expect(isOddOrEven(1)).to.equal(undefined);
+  });
 
-    it("Test for even", function () {
-        expect(isOddOrEven("abcd")).to.equal("even");
-    });
+  it("Test for even", function () {
+    expect(isOddOrEven("abcd")).to.equal("even");
+  });
 
-    it("Test for odd", function () {
-        expect(isOddOrEven("abc")).to.equal("odd");
-    });
+  it("Test for odd", function () {
+    expect(isOddOrEven("abc")).to.equal("odd");
+  });
 });
+
+// we must add these commands: 
+// in terminal: npm init -y
+// in terminal: npm install mocha
+// in terminal: npm install chai 
+
+// in Judje we commit only this:
+/*
+describe("Test Even or Odd functionality", function () {
+  it("Test for undefined", function () {
+    expect(isOddOrEven(1)).to.equal(undefined);
+  });
+
+  it("Test for even", function () {
+    expect(isOddOrEven("abcd")).to.equal("even");
+  });
+
+  it("Test for odd", function () {
+    expect(isOddOrEven("abc")).to.equal("odd");
+  });
+});
+*/
