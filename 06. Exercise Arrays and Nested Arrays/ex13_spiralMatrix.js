@@ -1,3 +1,10 @@
+/* Write a JS function that generates a Spirally-filled matrix with numbers, 
+with given dimensions.
+The input comes as 2 numbers that represent the dimension of the matrix. 
+The output is the matrix filled spirally starting from 1. You need to print
+ every row on a new line, with the cells separated by a space. 
+ Check the examples below. */
+
 function spiralMatrix(row, col){
     
     let rows = row;
@@ -56,3 +63,13 @@ function spiralMatrix(row, col){
 }
 
 spiralMatrix(5, 5);
+// 1 2 3 4 5
+// 16 17 18 19 6
+// 15 24 25 20 7
+// 14 23 22 21 8
+// 13 12 11 10 9
+
+spiralMatrix(3, 3);
+// 1 2 3
+// 8 9 4
+// 7 6 5 
